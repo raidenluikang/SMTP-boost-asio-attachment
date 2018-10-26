@@ -2,8 +2,7 @@
 send attachment via SMTP protocol  based on boost-asio
 
 # Dependencies
-boost
-openssl
+boost  and  openssl
 
 # compile
 g++ main.cpp -o main  -lboost-system -lcrypto -lssl
