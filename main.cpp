@@ -383,20 +383,23 @@ int main(int argc, char** argv)
     smtp::email_data data;
     smtp::email_server server;
     
-    server.server   = "smpts://smtp.yandex.com" ;
+    ////////////////////////////////////////////////
+    //   FILL server and data  fields with yours own data.
+    /////////////////////////////////////////////////
+    server.server   = "smpts://smtp.yandex.com"   ;
     server.port     = "465"                         ;
-    server.user     = "security@oson.uz"            ;
-    server.password = "sh2078080sh"                 ;
+    server.user     = "myemail@yandex.ru"            ;
+    server.password = "mypassword"                 ;
     
-    data.filename = "perl_email.pl";
-    data.filepath = "/home/briocpp/perl_email.pl" ;
-    data.from_email = "security@oson.uz";
-    //data.to_email   = "kh.normuradov@oson.uz";
-    data.to_email.push_back("kh.normuradov@oson.uz");
-    data.to_email.push_back("raidenluikang@gmail.com");
+    data.filename = "myfile.txt";
+    data.filepath = "/home/bom/myfile.txt" ;
+    data.from_email = "myemail@yandex.ru";
+     
+    data.to_email.push_back("your_email_1@gmail.com");
+    data.to_email.push_back("your_email_2@gmail.com");
     data.subject = "my test email to multiple recipients";
     data.text = "Hi";
-    
+    //////////////////////////////////////////////////
     
     client.set_email_server(server);
     client.set_email_data(data);
