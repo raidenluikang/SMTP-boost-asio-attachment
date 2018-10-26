@@ -18,7 +18,8 @@
 #include <fstream>
 #include <ostream>
 
-#define  BOOST_ERROR_CODE_HEADER_ONLY 1
+//@Note undef it if you want use header only boost-system library.
+//#define  BOOST_ERROR_CODE_HEADER_ONLY 1
 
 #include <boost/system/error_code.hpp>
 
@@ -32,14 +33,12 @@
 #include <boost/archive/iterators/remove_whitespace.hpp>
 
 #include <boost/algorithm/string.hpp>
-
-//#include <boost/shared_ptr.hpp>
-//#include <boost/property_tree/ptree.hpp>
+ 
 
 #define SCOPE_LOG()     printf("%s\n", __PRETTY_FUNCTION__ )
 
 
-namespace oson{ namespace network{ namespace smtp{
+namespace raiden{ namespace network{ namespace smtp{
     
     
 typedef ::std::shared_ptr< ::boost::asio::io_service > io_service_ptr;
@@ -103,7 +102,7 @@ private:
 }}} //end oson::network::smtp
 
 
-namespace smtp = oson::network::smtp;
+namespace smtp = raiden::network::smtp;
 
 static bool  verify_certificate(bool preverified,
                         boost::asio::ssl::verify_context& ctx)
