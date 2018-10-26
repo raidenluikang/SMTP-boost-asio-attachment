@@ -6,9 +6,8 @@
 
 /* 
  * File:   main.cpp
- * Author: briocpp
+ * Author: raidenluikang
  *
- * Created on October 26, 2018, 11:16 AM
  */
 
 #include <cstdlib>
